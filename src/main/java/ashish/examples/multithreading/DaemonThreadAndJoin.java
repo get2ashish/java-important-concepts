@@ -1,4 +1,4 @@
-package ashish.dev;
+package ashish.examples.multithreading;
 
 public class DaemonThreadAndJoin {
     public static void sleep(){

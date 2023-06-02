@@ -1,4 +1,4 @@
-package ashish.dev;
+package ashish.examples.multithreading;
 
 public class Factorial {
     public static void main(String[] args) {

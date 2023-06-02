@@ -1,6 +1,4 @@
-package ashish.dev;
-
-import java.util.concurrent.TimeUnit;
+package ashish.examples.multithreading;
 
 public class Volatile implements Runnable {
     //if you do not use volatile here the thread runs forever and will never stop as it never gets the updated value

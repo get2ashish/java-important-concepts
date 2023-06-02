@@ -1,4 +1,4 @@
-package ashish.dev;
+package ashish.examples.multithreading;
 
 import java.util.LinkedList;
 import java.util.Queue;

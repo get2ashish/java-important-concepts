@@ -1,4 +1,4 @@
-package ashish.dev;
+package ashish.examples.multithreading;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
