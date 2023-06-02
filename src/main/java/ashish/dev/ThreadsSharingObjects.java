@@ -32,4 +32,21 @@ class MyRunnable implements Runnable {
         System.out.println("Count value for Thread " + Thread.currentThread().getName() + " is " + count);
         System.out.println("Counter value for Thread " + Thread.currentThread().getName() + " is " + counter);
     }
+
+    //CPU Processing and why values are inconsistent
+    /*
+    -----------------------------------------
+     Step   |  Thread 1   |     Thread 2
+    -----------------------------------------
+     1   | read val 1     |  <nothing>
+    -----------------------------------------
+     2   |  <nothing>     |  read value 1
+    -----------------------------------------
+     3   | Adds 1 write2  |  <nothing>
+    -----------------------------------------
+     4   |  <nothing>     |  Adds 1 writes 2
+    -----------------------------------------
+     */
+
+
 }
