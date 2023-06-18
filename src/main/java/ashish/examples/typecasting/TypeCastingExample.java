@@ -64,5 +64,19 @@ public class TypeCastingExample {
 
          PS :  If the MSB was 0 then remaining 7 bits will be used as is for further calculation
          **/
+
+
+        //In Java both operands of the binary operator needs to be of the same type
+        double divValue1 = 9/2;
+        //here 9/2 will result in 4 as both are int values then result 4 will be promoted to double
+        // so result will be 4.0
+        System.out.println(divValue1);
+
+
+        //In Java both operands of the binary operator needs to be of the same type
+        double divValue2 = 9/2.0;
+        //here 9/2.0 will result in 4.5 as both are not double values then 9 will be promoted to double and
+        // result will be 4.5
+        System.out.println(divValue2);
     }
 }
