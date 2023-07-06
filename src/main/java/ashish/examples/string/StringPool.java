@@ -26,5 +26,14 @@ public class StringPool {
         System.out.println(s1.equals(s3));
         System.out.println(s1.equals(s4));
         System.out.println(s1.equals(s5));
+
+
+
+        String s7 = "Go-Java!";
+        String s8 = new String("Go-Java!").intern();
+        String s9 = new String("Go-Java!").intern();
+        System.out.println("Intern checks");
+        System.out.println(s7==s8);
+        System.out.println(s8==s9);
     }
 }
