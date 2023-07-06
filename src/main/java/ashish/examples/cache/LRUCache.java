@@ -10,8 +10,8 @@ public class LRUCache {
     private LinkedList<Integer> order;
     private final int CACHE_SIZE;
 
-    LRUCache(int cacheSize) {
-        this.CACHE_SIZE = cacheSize;
+    public LRUCache(int cacheSize) {
+        CACHE_SIZE = cacheSize;
         order = new LinkedList<>();
         cache = new HashMap<>();
     }
