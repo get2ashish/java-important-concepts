@@ -1,4 +1,4 @@
-package ashish.examples.principles;
+package ashish.examples.solidprinciples;
 
 public class SingleResponsibilityPrinciple {
 

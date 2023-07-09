@@ -1,4 +1,4 @@
-package ashish.examples.principles;
+package ashish.examples.solidprinciples;
 
 import java.util.ArrayList;
 import java.util.List;
