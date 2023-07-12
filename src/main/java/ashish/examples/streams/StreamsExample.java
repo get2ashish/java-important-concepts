@@ -1,10 +1,13 @@
 package ashish.examples.streams;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -110,6 +113,18 @@ public class StreamsExample {
                 .collect(Collectors.toList());
 
         System.out.println(values);
+
+        //Find Duplicate numbers in a List
+        List<Integer> duplicateList = new ArrayList<>();
+        duplicateList.add(1);
+        duplicateList.add(1);
+        duplicateList.add(2);
+        duplicateList.add(3);
+
+        Set<Integer> duplicateInts = duplicateList.stream()
+                .filter(item->Collections.frequency(duplicateList,item)>1)
+                .collect(Collectors.toSet());
+        System.out.println(duplicateInts);
     }
 
 }

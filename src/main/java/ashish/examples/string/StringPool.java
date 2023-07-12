@@ -35,5 +35,15 @@ public class StringPool {
         System.out.println("Intern checks");
         System.out.println(s7==s8);
         System.out.println(s8==s9);
+
+
+
+        String s10 = "JavaWorld";
+        String s11 = new String("JavaWorld");
+        String s12 = new String("JavaWorld").intern();
+        System.out.println("New and Intern");
+        System.out.println(s10==s11);
+        System.out.println(s10==s12);
+
     }
 }
