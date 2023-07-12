@@ -124,7 +124,19 @@ public class StreamsExample {
         Set<Integer> duplicateInts = duplicateList.stream()
                 .filter(item->Collections.frequency(duplicateList,item)>1)
                 .collect(Collectors.toSet());
+
         System.out.println(duplicateInts);
+
+        //Find Common Element in 2 Arrays
+        int[] arr1 = {1,2,3,4,5};
+        int[] arr2 = {5,6,7,8,9};
+
+        List<Integer> commonElements = Arrays.stream(arr1)
+                .boxed()
+                .filter(number1->Arrays.stream(arr2).boxed().anyMatch(number2->number2==number1))
+                .collect(Collectors.toList());
+
+        System.out.println(commonElements);
     }
 
 }
