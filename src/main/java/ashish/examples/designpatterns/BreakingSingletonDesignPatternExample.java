@@ -8,9 +8,9 @@ public class BreakingSingletonDesignPatternExample {
         Constructor [] declaredConstructors = SingletonDesignPatternExample.class.getDeclaredConstructors();
         Constructor constructor = declaredConstructors[0];
         constructor.setAccessible(true);
-        SingletonDesignPatternExample singletonDesignPatternExample = (SingletonDesignPatternExample)constructor.newInstance();
+        SingletonDesignPatternExample reflectedInstance = (SingletonDesignPatternExample)constructor.newInstance();
         SingletonDesignPatternExample instance = SingletonDesignPatternExample.getInstance();
-        System.out.println(singletonDesignPatternExample.hashCode());
+        System.out.println(reflectedInstance.hashCode());
         System.out.println(instance.getInstance().hashCode());
     }
 }
