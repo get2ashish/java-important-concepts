@@ -1,6 +1,10 @@
 package ashish.examples.designpatterns;
 
 public class SingletonDesignPatternBillPughExample {
+
+    private SingletonDesignPatternBillPughExample(){
+
+    }
     private static class BillPughSingleton{
 
         private static final SingletonDesignPatternBillPughExample INSTANCE = new SingletonDesignPatternBillPughExample();
