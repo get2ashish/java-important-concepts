@@ -12,5 +12,7 @@ public class BreakingSingletonDesignPatternExample {
         SingletonDesignPatternExample instance = SingletonDesignPatternExample.getInstance();
         System.out.println(reflectedInstance.hashCode());
         System.out.println(instance.getInstance().hashCode());
+
+        //Other way to break Singleton pattern is using Serialization thats why we have created the readResolve method
     }
 }
