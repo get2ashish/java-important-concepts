@@ -1,10 +1,11 @@
 package ashish.examples.designpatterns;
 
+import java.io.Serializable;
 import java.util.Objects;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-public class SingletonDesignPatternExample {
+public class SingletonDesignPatternExample implements Serializable {
     private static volatile SingletonDesignPatternExample instance = null;
     private static final Lock lock = new ReentrantLock(true);
 
@@ -19,6 +20,13 @@ public class SingletonDesignPatternExample {
             }
             lock.unlock();
         }
+        return instance;
+    }
+
+    /**
+     * This method will be invoked when the deserialization of object happens and it will maintain the same Object
+     */
+    protected Object readResolve(){
         return instance;
     }
 }
