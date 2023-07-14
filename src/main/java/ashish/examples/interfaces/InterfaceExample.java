@@ -34,3 +34,11 @@ public class InterfaceExample implements IBank {
         IBank.myStaticMethod();
     }
 }
+
+class OtherClass extends InterfaceExample{
+    public static void main(String[] args) {
+        OtherClass obj = new OtherClass();
+        obj.myDefaultMethod();
+    }
+
+}
