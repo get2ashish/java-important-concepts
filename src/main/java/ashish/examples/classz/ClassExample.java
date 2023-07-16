@@ -12,6 +12,10 @@ public class ClassExample {
 
         //NoClassDefFoundError :  When Java Runtime system tried to load a class when its no longer present.
         //It was present at Compile time but missing at run time
+        //How to check this
+        //Step 1 : Build this project
+        //Step 2 : Delete Class B class file
+        //Step 3 : Run class A from command prompt
 
 
         Constructor[] constructors = DynamicClass.class.getConstructors();

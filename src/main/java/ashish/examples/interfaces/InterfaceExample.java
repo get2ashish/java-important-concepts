@@ -11,6 +11,17 @@ interface IBank {
     static void myStaticMethod() {
         System.out.println("static method of Interface");
     }
+
+    //From Java 9
+    private void myPrivateMethod(){
+        System.out.println("private method");
+    }
+
+    //This method cannot be executed using java IBank will get NoClassDefError
+    public static void main(String [] args){
+        System.out.println("public static main method");
+    }
+
 }
 
 public class InterfaceExample implements IBank {
