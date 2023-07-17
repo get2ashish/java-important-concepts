@@ -22,6 +22,15 @@ interface IBank {
         System.out.println("public static main method");
     }
 
+    //You cannot have Object class methods as default or private methods in Interface
+    /*default public int hashCode() {
+        return 1;
+    }
+
+    default public boolean equals(Object obj) {
+        return Boolean.TRUE;
+    }*/
+
 }
 
 public class InterfaceExample implements IBank {
@@ -51,5 +60,4 @@ class OtherClass extends InterfaceExample{
         OtherClass obj = new OtherClass();
         obj.myDefaultMethod();
     }
-
 }
