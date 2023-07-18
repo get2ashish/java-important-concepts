@@ -1,6 +1,6 @@
 package ashish.examples.string;
 
-public class StringPool {
+public class StringPoolExample {
     public static void main(String[] args) {
 
         //String Pool or String Constant Pool is a memory area (in heap) which stores String literals.
