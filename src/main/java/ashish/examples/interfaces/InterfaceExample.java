@@ -9,6 +9,7 @@ package ashish.examples.interfaces;
  * Example
  * Using List<String> list = new LinkedList<>(); is better than using LinkedList<String> list = new LinkedList<>();
  * so you wont be able to use peek, poll pop  methods but rather use methods specified in Parent class
+ * Such implementations are less prone to change and are much easier to maintain.
  */
 interface IBank {
     void update();
