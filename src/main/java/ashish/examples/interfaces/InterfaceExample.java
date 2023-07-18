@@ -1,6 +1,15 @@
 package ashish.examples.interfaces;
 
 
+/**
+ * Why do we code to an interface?
+ * 1) Its always a good practice using a parent reference to instantiate and not concerete implementation classes.
+ * As when you use Parent reference you use the methods specified in the parent <Interface> and not those specific to child
+ * Such implementations are less prone to change.
+ * Example
+ * Using List<String> list = new LinkedList<>(); is better than using LinkedList<String> list = new LinkedList<>();
+ * so you wont be able to use peek, poll pop  methods but rather use methods specified in Parent class
+ */
 interface IBank {
     void update();
 
