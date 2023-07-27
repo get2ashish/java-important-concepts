@@ -137,6 +137,37 @@ public class StreamsExample {
                 .collect(Collectors.toList());
 
         System.out.println(commonElements);
+
+
+        // Consider a list (employeeDTOS) club records together
+        //Understand that we can collect and then call stream again
+
+        List<EmployeeDTO> employeeDTOS = new ArrayList<>();
+        employeeDTOS.add(new EmployeeDTO(1,"Ashish","as@gmail.com"));
+        employeeDTOS.add(new EmployeeDTO(1,"Ashish","as@homtmail.com"));
+        employeeDTOS.add(new EmployeeDTO(2,"Mario","Mario@gmail.com"));
+        employeeDTOS.add(new EmployeeDTO(3,"Luigi","Luigi@gmail.com"));
+
+        List<Employee> personList = employeeDTOS
+                .stream()
+                .collect(Collectors.groupingBy(item -> item.id()))
+                .entrySet()
+                .stream()
+                .map(item -> new Employee(item.getKey(),
+                        item.getValue().get(0).name(),
+                        item.getValue()
+                                .stream()
+                                .map(val -> val.email())
+                                .collect(Collectors.toList()))).collect(Collectors.toList()
+                );
+
+        System.out.println(personList);
     }
 
 }
+
+record EmployeeDTO(int id, String name, String email) {
+}
+record Employee(int id, String name, List<String> emails){
+}
+
