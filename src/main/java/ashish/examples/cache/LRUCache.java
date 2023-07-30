@@ -25,10 +25,10 @@ public class LRUCache {
         cache.put(key, value);
     }
 
-    String getFromCache(int key) {
+    String getFromCache(Integer key) {
         String res = cache.get(key);
         if (Objects.nonNull(res)) {
-            order.remove((Object) key);
+            order.remove(key);
             order.addFirst(key);
         }
         return res;
