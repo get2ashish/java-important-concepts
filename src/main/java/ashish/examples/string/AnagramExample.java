@@ -36,5 +36,28 @@ public class AnagramExample {
                 }
             }
         }
+
+
+        //Or using streams
+        myList.stream()
+                .collect(Collectors.groupingBy(item -> item.length()))
+                .entrySet()
+                .stream()
+                .forEach(entry -> {
+                    List<String> nameList = entry.getValue();
+                    String firstName = nameList.remove(0);
+                    char[] arr = firstName.toCharArray();
+                    Arrays.sort(arr);
+                    for (String name : nameList) {
+                        char[] nextNameArr = name.toCharArray();
+                        Arrays.sort(nextNameArr);
+                        if (Arrays.equals(arr, nextNameArr)) {
+                            System.out.println(firstName + " is anagram to " + name);
+                            break;
+                        }
+                    }
+                });
+
+
     }
 }
