@@ -1,6 +1,14 @@
 package ashish.examples.designpatterns;
 
+
 public class DecoratorDesignPatternExample {
+
+    /**
+     * A decorator design pattern is used to modify the functionality of an object at runtime without changing it.
+     * Other instances of the same class will not be effected by this, so individual objects get the modified behavior
+     * Its a structural design pattern
+     * It uses composition
+     */
 
     public static void main(String[] args) {
         Computer gamingDesktop = new GamingDesktop(new BasicComputer());
