@@ -11,20 +11,20 @@ public class DecoratorDesignPatternExample {
      */
 
     public static void main(String[] args) {
-        Computer gamingDesktop = new GamingDesktop(new BasicComputer());
+        Desktop gamingDesktop = new GamingDesktop(new BasicDesktop());
         gamingDesktop.assemble();
 
-        Computer serverDesktop = new ServerDesktop(new BasicComputer());
+        Desktop serverDesktop = new ServerDesktop(new BasicDesktop());
         serverDesktop.assemble();
     }
 
 }
 
-interface Computer{
+interface Desktop {
     public void assemble();
 }
 
-class BasicComputer implements Computer{
+class BasicDesktop implements Desktop {
 
     @Override
     public void assemble() {
@@ -32,11 +32,11 @@ class BasicComputer implements Computer{
     }
 }
 
-class ComputerDecorator implements Computer{
+class ComputerDecorator implements Desktop {
 
-    protected Computer computer;
+    protected Desktop computer;
 
-    public ComputerDecorator(Computer computer){
+    public ComputerDecorator(Desktop computer){
         this.computer = computer;
     }
     @Override
@@ -47,7 +47,7 @@ class ComputerDecorator implements Computer{
 
 class GamingDesktop extends ComputerDecorator{
 
-    public GamingDesktop(Computer computer) {
+    public GamingDesktop(Desktop computer) {
         super(computer);
     }
 
@@ -60,7 +60,7 @@ class GamingDesktop extends ComputerDecorator{
 
 class ServerDesktop extends ComputerDecorator{
 
-    public ServerDesktop(Computer computer) {
+    public ServerDesktop(Desktop computer) {
         super(computer);
     }
 
