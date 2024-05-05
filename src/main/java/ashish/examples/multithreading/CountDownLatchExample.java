@@ -7,7 +7,7 @@ import java.util.concurrent.Executors;
 public class CountDownLatchExample {
     public static void main(String[] args) throws InterruptedException {
 
-        //Count down latch is usefull when you have muktiple dependent service and you want to proceed when all of them
+        //Count down latch is useful when you have multiple dependent service and you want to proceed when all of them
         //complete
 
         ExecutorService executorService = Executors.newFixedThreadPool(4);
