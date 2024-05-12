@@ -3,7 +3,7 @@ package ashish.examples.interfaces;
 
 /**
  * Why do we code to an interface?
- * 1) Its always a good practice using a parent reference to instantiate and not concerete implementation classes.
+ * 1) Its always a good practice using a parent reference to instantiate and not concrete implementation classes.
  * As when you use Parent reference you use the methods specified in the parent <Interface> and not those specific to child
  * Such implementations are less prone to change.
  * Example
